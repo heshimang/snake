@@ -1,0 +1,24 @@
+{
+  // include 说明哪些文件需要编译
+  // "include": ["./src/**/*"],
+  // "exclude" 不需要编译的目录
+  // 默认包含["node_modules","bower_components","jspm_packages"]，所以下面的一行如果只添加“node_module”时，其实完全可以省略
+  // "exclude": ["node_module"],
+  // "compilerOptions" 编译器选项
+  "compilerOptions": {
+    "target": "ES5", // 用来指定ts被编译成ES的版本
+    "module": "es2015", // 用来指定ts模块被编译成的模块解决方案
+    "lib": ["ES2015", "DOM"], // 指定项目中要使用的库
+    "outDir": "./dist", // 指定编译后的文件所在目录
+    "allowJs": true, // 用来是否允许编译的目录下js编译
+    "removeComments": true, // 是否移除注释
+    "noEmit": false, // 不生成编译文件，仅用来检查ts文件
+    "noEmitOnError": false, // 当有错误时不编译文件
+    "strict": true, // 用来制定严格模式， 默认设置为true后，以下的各个选项默认为true。所以可以设置“strict”: true，然后下面的属性单个设置为false
+    "alwaysStrict": true, // 用来指定编译后代码是否使用严格模式
+    "noImplicitAny": true, // 不允许使用隐式的any类型
+    "noImplicitThis": true, // 不允许不明确类型的this
+    "strictNullChecks": true, // 严格的检查空值
+    // "outFile": "./dist/app.js" // 用来将代码合并为一个文件, 一般不使用，一般为打包工具处理
+  }
+}
