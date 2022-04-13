@@ -17,6 +17,23 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      browsers: "last 2 versions",
+                    },
+                  ],
+                ],
+              },
+            },
+          },
           { loader: "less-loader" },
         ],
         exclude: /node_modules/,
